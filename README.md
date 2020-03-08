@@ -4,19 +4,18 @@ Building out REST API in Node starting with raw denormalized stock data. Potenti
 ## Method
 
 ### Initial
-1) aggregate `rawData` files into one denormalized dataset with python & pandas
-2) introduce scenario where we are starting up a company to render this data to the public
-3) build the data model (use Postgres) by denormalizing data
-4) dockerize & deployment (project setup)
-5) build basic read routes
-6) build C, U, D routes (auth'd)
-7) create basic front end (update docker setup to include both with one command)
+1) aggregate `rawData` files into one denormalized dataset with python & pandas for analysis then split data into separate files for import
+2) build the data model (use Postgres) by denormalizing data
+3) build basic read routes
+4) build C, U, D routes (auth'd)
+5) dockerize/deploy
+6) create basic front end (update docker setup to include both with one command)
 
 ### Next Steps
 1) Implement in Django? [Tutorial](https://blog.logrocket.com/creating-an-app-with-react-and-django/)
 2) Implement in Rails? [Tutorial](https://blog.heroku.com/a-rock-solid-modern-web-stack)
-3) Implement in Go? [Tutorial](https://medium.com/@adigunhammedolalekan/build-and-deploy-a-secure-rest-api-with-go-postgresql-jwt-and-gorm-6fadf3da505b)
-4) Any or all of these to broaden skill set. Only do 1 and get on to serverless
+3) Implement in Go? [Tutorial](https://medium.com/@adigunhammedolalekan/build-and-deploy-a-secure-rest-api-with-go-postgresql-jwt-and-gorm-6fadf3da505b) [Info](https://www.reddit.com/r/golang/comments/a4kzqk/has_anyone_deployed_a_createreactapp_with_go/)
+4) Any or all of these to broaden skill set? Only do 1 and get on to serverless?
 
 ### Next Next Steps
 2) monolith needs split into microservices. This could get really in-depth and include logging, communications, proxies, partitioning data, performance, data aggregations, etc.

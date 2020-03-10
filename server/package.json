@@ -1,0 +1,24 @@
+{
+  "name": "the-stocks-api",
+  "version": "1.0.0",
+  "description": "A lab to explore BE development",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nate Young",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "node-postgres": "^0.1.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

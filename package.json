@@ -1,0 +1,23 @@
+{
+  "name": "api-orama",
+  "version": "1.0.0",
+  "description": "Monorepo for stocks API server & client",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nate-io/api-orama.git"
+  },
+  "keywords": [],
+  "author": "Nate Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nate-io/api-orama/issues"
+  },
+  "homepage": "https://github.com/nate-io/api-orama#readme"
+}

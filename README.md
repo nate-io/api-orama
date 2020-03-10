@@ -1,9 +1,16 @@
-# api-orama
-Building out REST API in Node starting with raw denormalized stock data. Potentially then doing it again in both Django/Rails/Go, at least the basic setup.
+# API-ORAMA
+Building out REST API in Node starting with raw denormalized stock data. Then doing it again in some combo if Django/Rails/Go - at least the basic setup - to broaden experience and get a feel for different stacks.
 
-## Method
+## Setup
+1. Start local `postgres` <br>
+   a. uses fair amount of data & don't want to run remote $$<br>
+   b. DB will be name `stocks_api`
+2. At top level run `npm start`<br>
+   a. uses `concurrently` package to start server then client
+   
 
-### Initial
+## Project Goals
+### Initial 
 1) aggregate `rawData` files into one denormalized dataset with python & pandas for analysis then split data into separate files for import
 2) build the data model (use Postgres) by denormalizing data
 3) build basic read routes

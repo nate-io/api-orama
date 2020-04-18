@@ -4,7 +4,10 @@
   "description": "Monorepo for stocks API server & client",
   "main": "index.js",
   "scripts": {
-    "start-node-postgres": "npm start --prefix node-postgres"
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "start": "concurrently -n \"server,client\" -c \"magenta,blue\" \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

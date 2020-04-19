@@ -1,10 +1,16 @@
 {
   "name": "the-stocks-api",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=13"
+  },
+  "engineStrict": true,
   "description": "A lab to explore BE development",
-  "main": "index.js",
+  "type": "module",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "npm run start-postgres && nodemon app.js",
+    "start-postgres": "./start-postgres.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,9 +18,12 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
     "helmet": "^3.21.3",
     "node-postgres": "^0.1.4",
+    "pg": "^8.0.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {

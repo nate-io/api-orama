@@ -11,8 +11,5 @@ const pool = new Pool({...dbConnection})
 
 export default {
   // use a parameterized query for max safety
-  // query: (text, params) => pool.query(text, params)
-  query: (text, params = [], callback) => {
-    return pool.query(text, params, callback)
-  }
+  query: (text, params) => pool.query(text, params)
 }

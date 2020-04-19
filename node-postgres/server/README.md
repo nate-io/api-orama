@@ -1,5 +1,8 @@
 # The Stocks API Node/Postgres Edition
 
+## Database
+Using PostgreSQL for this iteration. Installed with homebrew and executed via `brew services`, `npm start` includes first running a shell script to start the service.
+
 ```
   src
   │   app.js          # App entry point

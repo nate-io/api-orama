@@ -1,12 +1,17 @@
 import express from 'express'
-
 import config from './config/index.js'
+import db from './loaders/db.js'
 
 const { port } = config 
 const app = express()
 
 app.get('/', (req, res) => (
-  res.send('Hello world!')
+  db.query('SELECT * FROM test1', (err, result) => {
+    if (err) {
+      console.log(err)
+    }
+    res.send(result.rows)
+  })
 ))
 
 app.listen(port, () => {

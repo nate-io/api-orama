@@ -5,8 +5,12 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export default {
-  db: {
-    url: process.env.DB_URL
+  dbConnection: {
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    pwd: process.env.PGPASSWORD,
+    port: process.env.PGPORT
   },
   port: process.env.PORT
 }

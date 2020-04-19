@@ -1,6 +1,10 @@
 {
   "name": "the-stocks-api",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=13"
+  },
+  "engineStrict": true,
   "description": "A lab to explore BE development",
   "type": "module",
   "main": "app.js",

@@ -1,0 +1,26 @@
+{
+  "name": "api-orama-node-postgres",
+  "version": "1.0.0",
+  "description": "Stocks API With Node & Postgres",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm start --prefix server",
+    "start": "concurrently -n \"server,client\" -c \"magenta,blue\" \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nate-io/api-orama.git"
+  },
+  "keywords": [],
+  "author": "Nate Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nate-io/api-orama/issues"
+  },
+  "homepage": "https://github.com/nate-io/api-orama#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

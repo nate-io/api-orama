@@ -1,16 +1,17 @@
 /**
  * Export config as clean JS object
  */
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config()
 
-export default {
+module.exports = {
   dbConnection: {
-    user: process.env.PGUSER,
     host: process.env.PGHOST,
     database: process.env.PGDATABASE,
-    pwd: process.env.PGPASSWORD,
+    user: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
     port: process.env.PGPORT
   },
   port: process.env.PORT
 }
+

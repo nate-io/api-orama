@@ -27,5 +27,3 @@ Building out REST API in Node starting with raw denormalized stock data. Then do
 ### Next Next Steps
 2) monolith needs split into microservices. This could get really in-depth and include logging, communications, proxies, partitioning data, performance, data aggregations, etc.
 3) Serverless - some of the routes could be great targets to go serverless. What is the performance trade-off? Since C,U,D routes are used less often are they better candidates vs read routes? Or are read routes the best case to go serverless since they fire once as needed and could offer best cost savings? Or is there a performance hit for the read latency? The analysis is important here. [Tutorial](https://serverless-stack.com/#table-of-contents)
-
-

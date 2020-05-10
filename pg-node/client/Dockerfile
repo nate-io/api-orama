@@ -5,17 +5,17 @@ FROM node:current-slim
 RUN mkdir -p /usr/app
 WORKDIR /usr/app
 
-# Copy the file from your host to your current location 
+# Copy the file from your host to your current location
 COPY package*.json ./
 
-# install deps inside image filesystem quietly
+#  install deps inside image filesystem quietly
 RUN npm ci -qy
 
-# copy source code from host to container
+# copy source code from host to image filesystem
 COPY . .
 
-# container internal listening port
-EXPOSE 8080
+# declare container's internal port 
+EXPOSE 3000
 
 # runtime command to exec
 CMD ["npm", "start"]

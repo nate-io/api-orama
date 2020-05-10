@@ -18,6 +18,7 @@ app.get('/', (request, response) => {
   response.json({ info: 'It works!' })
 })
 
+// check db
 app.get('/test_query', (request, response) => {
   let q = 'SELECT * FROM test1'
   pool.query(q, (error, results) => {

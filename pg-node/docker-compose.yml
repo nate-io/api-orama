@@ -1,17 +1,27 @@
 version: "3"
 services:
-  node_backend:
-    container_name: "server"
-    build: .
-    ports:
-      - "49160:8000"
-  pg:
-    image: "postgres:12"
-    container_name: "postgres"
-    ports:
-      - "5432:5432"
+  server:
+    build:
+      context: ./server/
+    command: /usr/app/node_modules/.bin/nodemon src/index.js
     volumes:
-      - ./pg/db_data:/var/lib/postgresql/data
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8080:8080"
+    # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
     environment:
-      POSTGRES_DB: "api"
-      POSTGRES_PASSWORD: "password"
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  client:
+    build:
+      context: ./client/
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+      

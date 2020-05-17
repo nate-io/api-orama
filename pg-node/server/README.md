@@ -4,7 +4,9 @@
 
 # The Stocks API Node/Postgres Edition
 
-
+### TODO
+* add a worker/job
+* streaming data from stock price tables
 
 ### Project Layout
 
@@ -34,9 +36,17 @@ src
 
 
 
-### Database Migration
+### Database
 
-Using [`db-migrate`]([https://db-migrate.readthedocs.io/en/latest/Getting%20Started/installation/](https://db-migrate.readthedocs.io/en/latest/Getting Started/installation/)) package.
+Using `sequelize` as ORM and `sequelize-cli` for migrations & seeds. Migrations/models/seeders found at `./db` and vongif found in common config directory `./config/migrationsConfig.js`.
+
+* Migration Commands
+  * `npx sequelize-cli db:migrate`
+    * run all migrations not in db (based on `SequelizeMeta` database table)
+  * `npm sequelize-cli db:migrate:undo`
+    *  undo last migration
+  * `npm sequelize-cli db:migrate:undo:all`
+    * undo all migrations
 
 
 

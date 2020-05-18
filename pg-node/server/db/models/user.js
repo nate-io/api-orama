@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     isActive: DataTypes.BOOLEAN
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.hasOne(models.Role)
   };
   return User;
 };

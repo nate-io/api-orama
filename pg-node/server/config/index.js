@@ -6,11 +6,11 @@ dotenv.config()
 
 module.exports = {
   dbConnection: {
-    host: process.env.PGHOST,
-    database: process.env.PGDATABASE,
-    user: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-    port: process.env.PGPORT
+    host: process.env.PG_HOST,
+    database: process.env.PG_DATABASE,
+    user: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
+    port: process.env.PG_PORT
   },
   port: process.env.PORT
 }

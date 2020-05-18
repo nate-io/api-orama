@@ -6,7 +6,7 @@ const app = express()
 const config = require('./config')
 
 // setup
-const { dbConnection, port } = config 
+const { port, ...dbConnection } = config 
 const pool = new Pool(dbConnection)
 
 app.use(cors())

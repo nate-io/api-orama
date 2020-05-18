@@ -1,8 +1,8 @@
 {
   "name": "the-stocks-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engineStrict": true,
-  "description": "A lab to explore BE development",
+  "description": "A lab to explore BE development - Node/Postgres version.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -20,6 +20,9 @@
     "helmet": "^3.21.3",
     "node-postgres": "^0.1.4",
     "pg": "^8.0.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.9",
+    "sequelize-cli": "^5.5.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {
